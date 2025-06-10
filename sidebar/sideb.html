@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sidebar</title>
+  <link rel="stylesheet" href="sidebar.css" />
+</head>
+
+<body>
+
+  <div class="sidebar" id="sidebar">
+    
+     
+    <div class="sidebar-item toggle-button" id="toggleSidebar">
+      <img src="menu.png" alt="Toggle Sidebar" />
+      <span class="label">MENU</span>
+    </div>
+    
+    <div class="sidebar-item sidebar-item-with-submenu" id="employeesMenu">
+      <img src="employeeicon.png" alt="Employees Icon" class="icon" />
+      <span class="label">EMPLOYEES</span>
+      <img src="arrow.png" alt="Arrow" class="submenu-arrow" />
+    </div>
+
+    <div class="submenu" id="employeesSubmenu">
+      <div class="submenu-item">All Employees</div>
+      <div class="submenu-item">Employee Leave</div>
+    </div>
+    
+    <div class="sidebar-item">
+      <img src="position.png" alt="Position Icon" />
+      <span class="label">POSITION</span>
+    </div>
+
+    <div class="sidebar-item">
+      <img src="schedule.png" alt="Schedule Icon" />
+      <span class="label">SCHEDULE</span>
+    </div>
+
+    <div class="sidebar-item sidebar-item-with-submenu" id="attendanceMenu">
+      <img src="attendance.png" alt="Attendance Icon" class="icon" />
+      <span class="label">ATTENDANCE</span>
+      <img src="arrow.png" alt="Arrow" class="submenu-arrow" />
+    </div>
+
+    <div class="submenu" id="attendanceSubmenu">
+      <div class="submenu-item">Timesheet</div>
+      <div class="submenu-item">Late</div>
+      <div class="submenu-item">Overtime</div>
+    </div>
+
+    <div class="sidebar-item">
+      <img src="payroll.png" alt="Payroll Icon" />
+      <span class="label">PAYROLL</span>
+    </div>
+
+    <div class="sidebar-item">
+      <img src="accounts.png" alt="Account Icon" />
+      <span class="label">ACCOUNTS</span>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>All Employees</title>
+  <link rel="stylesheet" href="style4.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>ALL EMPLOYEES</h1>
+      <p>Dashboard / Employee</p>
+    </header>
+
+    <div class="top-controls">
+      <select id="positionFilter">
+        <option value="">Position</option>
+        <option value="Web Developer">Web Developer</option>
+        <option value="IOS Developer">IOS Developer</option>
+      </select>
+      <input type="text" id="searchInput" placeholder="Enter employee ID/NAME" />
+      <button id="searchBtn">SEARCH</button>
+      <button class="add-btn">+ Add Employee</button>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Employee ID</th>
+          <th>Email</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="employeeBody">
+        <!-- JavaScript will populate this -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="script4.js"></script>
+</body>
+</html>

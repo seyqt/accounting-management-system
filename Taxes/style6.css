@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  background-color: #f5f0ea;
+}
+
+.sidebar {
+  width: 60px;
+  background-color: #dcdcdc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+  background-image: url('https://via.placeholder.com/30'); /* Replace with actual logo */
+  background-size: cover;
+  margin-bottom: 20px;
+}
+
+.menu-icons .icon {
+  font-size: 24px;
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px 40px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.breadcrumbs h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.breadcrumbs p {
+  font-size: 14px;
+  color: #444;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bell {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.dropdown {
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+.table-section {
+  margin-top: 30px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+thead tr {
+  background-color: #d7bca7;
+  text-align: left;
+}
+
+th, td {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  background-color: #ccc;
+  border-radius: 20px;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #333;
+}
+
+input:checked + .slider:before {
+  transform: translateX(16px);
+}

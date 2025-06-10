@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f2ebe1;
+  color: #333;
+}
+
+.container {
+  padding: 2rem;
+}
+
+.header h1 {
+  margin-bottom: 0;
+}
+
+.header p {
+  color: #7a6e63;
+}
+
+.controls {
+  margin: 1rem 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+th, td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+thead tr {
+  background-color: #d4ac8f;
+  color: #000;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.pagination button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #eee;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.pagination button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+#entry-info {
+  margin-top: 0.5rem;
+  color: #666;
+}
+
+.action-icons {
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.action-icons span:hover {
+  color: red;
+}

@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  background-color: #f2ede6;
+}
+
+.sidebar {
+  width: 60px;
+  background-color: #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.logo {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  font-size: 18px;
+}
+
+.main {
+  flex-grow: 1;
+  padding: 20px;
+  width: 100%;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.topbar h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.topbar p {
+  font-size: 14px;
+  color: #666;
+}
+
+.user-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 14px;
+}
+
+.table-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.table-controls select, .search-bar input {
+  padding: 5px;
+  font-size: 14px;
+}
+
+.search-bar input {
+  margin-left: 20px;
+  padding: 5px;
+  width: 200px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  font-size: 14px;
+}
+
+thead {
+  background-color: #e1cbb7;
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Employee Leaves</title>
+  <link rel="stylesheet" href="style3.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>LEAVES</h1>
+      <p>Dashboard / Employee Leave</p>
+    </header>
+
+    <div class="controls">
+      <label for="entries">Show
+        <select id="entries">
+          <option value="5" selected>5</option>
+          <option value="10">10</option>
+        </select> entries
+      </label>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Employee</th>
+          <th>From</th>
+          <th>To</th>
+          <th>No. Of Days</th>
+          <th>Reason</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="leave-body">
+        <!-- Rows inserted via JavaScript -->
+      </tbody>
+    </table>
+
+    <div class="pagination">
+      <button id="prev" disabled>Previous</button>
+      <span id="page-indicator">1</span>
+      <button id="next">Next</button>
+    </div>
+
+    <p id="entry-info">Showing 1 to 3 of 3 entries</p>
+  </div>
+
+  <script src="script3.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Late Employees</title>
+  <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo">🌿</div>
+    <ul>
+      <li>👥</li>
+      <li>🔍</li>
+      <li>🕒</li>
+      <li>📅</li>
+      <li>📋</li>
+      <li>📖</li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <header class="topbar">
+      <div>
+        <h1>LATE</h1>
+        <p>Late Employee</p>
+      </div>
+      <div class="user-profile">
+        <span class="bell">🔔</span>
+        <span class="name">Cardo Dalisay ▼</span>
+        <span class="role">Administrator</span>
+      </div>
+    </header>
+
+    <div class="table-controls">
+      <label for="entries">Show</label>
+      <select id="entries">
+        <option>5</option>
+        <option>10</option>
+        <option>25</option>
+      </select>
+      <span>Entries</span>
+
+      <div class="search-bar">
+        <input type="text" id="search-date" placeholder="Search Date or Employee ID">
+      </div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>DATE</th>
+          <th>EMPLOYEE ID</th>
+          <th>TIME IN</th>
+          <th>SCHEDULED TIME</th>
+        </tr>
+      </thead>
+      <tbody>
+       
+      </tbody>
+    </table>
+  </div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    fetch("fetch_data.php")
+      .then((response) => response.json())
+      .then((data) => {
+        const tbody = document.querySelector("table tbody");
+        const searchInput = document.getElementById("search-date");
+        const entriesSelect = document.getElementById("entries");
+
+        let filteredData = data;
+        let entriesPerPage = parseInt(entriesSelect.value);
+        let currentPage = 1;
+
+        function renderTable() {
+          tbody.innerHTML = "";
+          const start = (currentPage - 1) * entriesPerPage;
+          const end = start + entriesPerPage;
+          const pageData = filteredData.slice(start, end);
+
+          pageData.forEach((row) => {
+            const tr = document.createElement("tr");
+            tr.innerHTML = `
+              <td>${row.DATE}</td>
+              <td>${row.EMPLOYEE_ID}</td>
+              <td>${row.TIME_IN}</td>
+              <td>${row.SCHEDULED_TIME}</td>
+            `;
+            tbody.appendChild(tr);
+          });
+        }
+
+        
+        renderTable();
+
+        
+        searchInput.addEventListener("input", function () {
+          const searchValue = searchInput.value.trim().toLowerCase();
+          filteredData = data.filter((row) =>
+            row.DATE.toLowerCase().includes(searchValue) ||
+            row.EMPLOYEE_ID.toString().toLowerCase().includes(searchValue)
+          );
+          currentPage = 1;
+          renderTable();
+        });
+
+       
+        entriesSelect.addEventListener("change", function () {
+          entriesPerPage = parseInt(entriesSelect.value);
+          currentPage = 1;
+          renderTable();
+        });
+      })
+      .catch((error) => console.error("Error fetching data:", error));
+  });
+</script>
+</body>
+</html>

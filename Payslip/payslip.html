@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Payslip Requests</title>
+  <link rel="stylesheet" href="style5.css">
+</head>
+<body>
+
+<div class="container">
+  <header class="header">
+    <h1>PAYSLIP</h1>
+    <p>Dashboard / Payslip</p>
+    <nav class="tabs">
+      <span class="active">Payslip Requests</span>
+      <span>Payslip Template</span>
+    </nav>
+  </header>
+
+  <div class="table-controls">
+    <label>Show
+      <select>
+        <option>5</option>
+        <option>10</option>
+      </select>
+      entries
+    </label>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Employee</th>
+        <th>Date</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="payslipTable">
+      <!-- JS will populate -->
+    </tbody>
+  </table>
+
+  <footer class="pagination">
+    <span>Showing 1 to 3 of 3 entries</span>
+    <div class="page-controls">
+      <button disabled>Previous</button>
+      <button class="active">1</button>
+      <button disabled>Next</button>
+    </div>
+  </footer>
+</div>
+
+<script src="script5.js"></script>
+</body>
+</html>
